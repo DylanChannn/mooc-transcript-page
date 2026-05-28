@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>成绩单_中国大学MOOC（慕课）</title>
+  <title>&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;</title>
+  <meta name="apple-mobile-web-app-title" content="&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;">
+  <meta name="application-name" content="&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;">
+  <meta property="og:title" content="&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;">
+  <meta name="twitter:title" content="&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;">
   <style>
     * {
       box-sizing: border-box;
@@ -14,7 +18,6 @@
       margin: 0;
       min-height: 100%;
       background: #000;
-      color: #2e2e2e;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
         "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
     }
@@ -23,79 +26,8 @@
       padding-bottom: calc(116px + env(safe-area-inset-bottom));
     }
 
-    .topbar {
-      height: 104px;
-      padding: 18px 16px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .shield {
-      width: 36px;
-      height: 42px;
-      border-radius: 12px 12px 16px 16px;
-      background: linear-gradient(145deg, #41d8bd 0%, #18bba0 100%);
-      position: relative;
-      flex: 0 0 auto;
-      clip-path: polygon(50% 0, 92% 18%, 92% 68%, 50% 100%, 8% 68%, 8% 18%);
-    }
-
-    .shield::after {
-      content: "";
-      position: absolute;
-      left: 14px;
-      top: 9px;
-      width: 12px;
-      height: 24px;
-      background: #fff;
-      clip-path: polygon(37% 0, 100% 0, 61% 39%, 100% 39%, 23% 100%, 40% 53%, 0 53%);
-    }
-
-    .title-pill {
-      min-width: 0;
-      flex: 1;
-      height: 68px;
-      padding: 0 22px;
-      border-radius: 28px;
-      background: #f4f4f4;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .title {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-size: 28px;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0;
-      color: #2d2d2d;
-    }
-
-    .icons {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      color: #777;
-      flex: 0 0 auto;
-    }
-
-    .icons svg {
-      width: 28px;
-      height: 28px;
-      stroke: currentColor;
-      stroke-width: 2.8;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
     .content {
+      min-height: 100vh;
       padding: 26px 0 24px;
       background: #000;
     }
@@ -125,54 +57,26 @@
       height: 72px;
       border: 0;
       border-radius: 999px;
-      background: #ffd994;
+      background: #ffdc9c;
       color: #30291d;
-      font-size: 34px;
-      font-weight: 500;
-      text-decoration: none;
+      cursor: pointer;
+      font: 500 34px/1 -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .36);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .38);
       -webkit-tap-highlight-color: transparent;
+      appearance: none;
+    }
+
+    .save:active {
+      background: #f6ce82;
     }
 
     @media (max-width: 520px) {
-      .topbar {
-        height: 76px;
-        padding: 12px 10px;
-        gap: 8px;
-      }
-
-      .shield {
-        width: 28px;
-        height: 32px;
-      }
-
-      .shield::after {
-        left: 10px;
-        top: 7px;
-        width: 10px;
-        height: 18px;
-      }
-
-      .title-pill {
-        height: 52px;
-        padding: 0 14px;
-        border-radius: 24px;
-      }
-
-      .title {
-        font-size: 22px;
-      }
-
-      .icons {
-        gap: 14px;
-      }
-
-      .icons svg {
-        width: 24px;
-        height: 24px;
+      body {
+        padding-bottom: calc(104px + env(safe-area-inset-bottom));
       }
 
       .content {
@@ -183,39 +87,59 @@
         width: calc(100% - 24px);
       }
 
+      .save-wrap {
+        padding: 21px 24px calc(21px + env(safe-area-inset-bottom));
+      }
+
       .save {
+        width: min(72vw, 420px);
         height: 62px;
         font-size: 28px;
-        width: min(72vw, 420px);
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="shield" aria-hidden="true"></div>
-    <div class="title-pill">
-      <div class="title">成绩单_中国大学MOOC（慕课）</div>
-      <div class="icons" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M6 3h12a2 2 0 0 1 2 2v16l-8-4-8 4V5a2 2 0 0 1 2-2z"></path>
-          <path d="M12 7v6"></path>
-          <path d="M9 10h6"></path>
-        </svg>
-        <svg viewBox="0 0 24 24">
-          <path d="M20 12a8 8 0 1 1-2.34-5.66"></path>
-          <path d="M20 4v6h-6"></path>
-        </svg>
-      </div>
-    </div>
-  </header>
-
   <main class="content">
-    <img class="transcript" src="transcript.png" alt="成绩单_中国大学MOOC（慕课）">
+    <img class="transcript" src="transcript.png" alt="&#25104;&#32489;&#21333;_&#20013;&#22269;&#22823;&#23398;MOOC&#65288;&#24917;&#35838;&#65289;">
   </main>
 
   <div class="save-wrap">
-    <a class="save" href="transcript.png" download="成绩单_中国大学MOOC（慕课）.png">保存</a>
+    <button class="save" id="saveButton" type="button">&#20445;&#23384;</button>
   </div>
+
+  <script>
+    const imageUrl = "transcript.png";
+    const fileName = "\u6210\u7ee9\u5355_\u4e2d\u56fd\u5927\u5b66MOOC\uff08\u6155\u8bfe\uff09.png";
+
+    async function saveImage() {
+      try {
+        const response = await fetch(imageUrl, { cache: "no-store" });
+        const blob = await response.blob();
+        const file = new File([blob], fileName, { type: blob.type || "image/png" });
+
+        if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+          await navigator.share({
+            files: [file],
+            title: "\u6210\u7ee9\u5355_\u4e2d\u56fd\u5927\u5b66MOOC\uff08\u6155\u8bfe\uff09"
+          });
+          return;
+        }
+
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = objectUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      } catch (error) {
+        window.location.href = imageUrl;
+      }
+    }
+
+    document.getElementById("saveButton").addEventListener("click", saveImage);
+  </script>
 </body>
 </html>
