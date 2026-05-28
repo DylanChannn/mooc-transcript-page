@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>成绩单_中国大学MOOC（慕课）</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #000;
+      color: #2e2e2e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    body {
+      padding-bottom: calc(116px + env(safe-area-inset-bottom));
+    }
+
+    .topbar {
+      height: 104px;
+      padding: 18px 16px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .shield {
+      width: 36px;
+      height: 42px;
+      border-radius: 12px 12px 16px 16px;
+      background: linear-gradient(145deg, #41d8bd 0%, #18bba0 100%);
+      position: relative;
+      flex: 0 0 auto;
+      clip-path: polygon(50% 0, 92% 18%, 92% 68%, 50% 100%, 8% 68%, 8% 18%);
+    }
+
+    .shield::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 9px;
+      width: 12px;
+      height: 24px;
+      background: #fff;
+      clip-path: polygon(37% 0, 100% 0, 61% 39%, 100% 39%, 23% 100%, 40% 53%, 0 53%);
+    }
+
+    .title-pill {
+      min-width: 0;
+      flex: 1;
+      height: 68px;
+      padding: 0 22px;
+      border-radius: 28px;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: #2d2d2d;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: #777;
+      flex: 0 0 auto;
+    }
+
+    .icons svg {
+      width: 28px;
+      height: 28px;
+      stroke: currentColor;
+      stroke-width: 2.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .content {
+      padding: 26px 0 24px;
+      background: #000;
+    }
+
+    .transcript {
+      display: block;
+      width: calc(100% - 46px);
+      max-width: 1191px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .save-wrap {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      padding: 22px 24px calc(22px + env(safe-area-inset-bottom));
+      background: #000;
+      display: flex;
+      justify-content: center;
+    }
+
+    .save {
+      width: min(67vw, 520px);
+      height: 72px;
+      border: 0;
+      border-radius: 999px;
+      background: #ffd994;
+      color: #30291d;
+      font-size: 34px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .36);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (max-width: 520px) {
+      .topbar {
+        height: 76px;
+        padding: 12px 10px;
+        gap: 8px;
+      }
+
+      .shield {
+        width: 28px;
+        height: 32px;
+      }
+
+      .shield::after {
+        left: 10px;
+        top: 7px;
+        width: 10px;
+        height: 18px;
+      }
+
+      .title-pill {
+        height: 52px;
+        padding: 0 14px;
+        border-radius: 24px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .icons {
+        gap: 14px;
+      }
+
+      .icons svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .content {
+        padding-top: 18px;
+      }
+
+      .transcript {
+        width: calc(100% - 24px);
+      }
+
+      .save {
+        height: 62px;
+        font-size: 28px;
+        width: min(72vw, 420px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shield" aria-hidden="true"></div>
+    <div class="title-pill">
+      <div class="title">成绩单_中国大学MOOC（慕课）</div>
+      <div class="icons" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 3h12a2 2 0 0 1 2 2v16l-8-4-8 4V5a2 2 0 0 1 2-2z"></path>
+          <path d="M12 7v6"></path>
+          <path d="M9 10h6"></path>
+        </svg>
+        <svg viewBox="0 0 24 24">
+          <path d="M20 12a8 8 0 1 1-2.34-5.66"></path>
+          <path d="M20 4v6h-6"></path>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <img class="transcript" src="transcript.png" alt="成绩单_中国大学MOOC（慕课）">
+  </main>
+
+  <div class="save-wrap">
+    <a class="save" href="transcript.png" download="成绩单_中国大学MOOC（慕课）.png">保存</a>
+  </div>
+</body>
+</html>
